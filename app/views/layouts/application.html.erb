@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pictgram</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navber-fixed-top navbar-transparent">
+      <div class="container">
+        <%= link_to root_path do %>
+          <span><%= image_tag "icons/logo.png", class: "navbar-brand" %></span>
+        <% end %>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <% if session[:user_id] %>
+            <%= link_to session[:user_id], topics_path, class:"login-user" %>
+          <% else %>
+            <%= link_to "ログインしていません", login_path, class: "login-user" %>
+          <% end %>
+        </li>
+
+        <% if session[:user_id] %>
+          <li>
+            <%= link_to new_topic_path do %>
+              <%= image_tag "icons/camera.png" %>
+            <%end%>
+          </li>
+
+          <li>
+            <%= link_to favorites_path do %>
+              <%= image_tag "icons/index.png" %>
+            <%end%>
+          </li>
+
+
+          <li>
+            <%= link_to logout_path, method: :delete, data: {confirm: 'ログアウトしますか?' } do %>
+              <%= image_tag "icons/logout.png" %>
+            <% end %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to new_user_path do %>
+            <%= image_tag "icons/signin.png" %>
+            <%end%>
+          </li>
+
+        <% end %>
+      </ul>
+      </div>
+    </nav>
+
+
+    <% if flash[:notice] %>
+    　　<div class="alert alert-success">
+         <%= flash[:notice] %>
+    　　</div>
+    <% end %>
+    <% if flash[:alert] %>
+    　　<div class="alert alert-danger">
+    　　　　<%= flash[:alert] %>
+    　　</div>
+    <% end %>
+
+
+    <%= yield %>
+  </body>
+</html>

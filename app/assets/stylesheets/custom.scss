@@ -1,0 +1,249 @@
+
+h1,h2 {
+  font-weight: 100;
+}
+
+.text-white{
+  color: #fff;
+}
+
+.text-malon{
+  color: #800000;
+}
+
+.text-black{
+  color: black;
+}
+
+.text-slim{
+  font-weight: lighter;
+}
+
+.col-md-6 h1{
+  color: #F08080;
+}
+
+.text-red{
+  color: red;
+  font-weight: bold;
+}
+
+.btn-white{
+  color: #fff;
+  border: 1px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+
+  &:hover{
+    color: #fff
+  }
+
+}
+
+.top-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #464646;
+  background-image: url("/../../../pg-top.JPG");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.top-hero-container{
+  padding-top:140px;
+  h1{
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+  h2{
+    margin-bottom: 60px;
+  }
+}
+
+.form-control{
+  height: 45px;
+}
+
+.users-new-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/staff3.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+  .users-new-container {
+    padding-top: 80px;
+
+    .form-group{
+      margin-bottom: 20px;
+    }
+  }
+  .btn-block:hover{
+      color: #fff
+    }
+}
+
+.btn-login{
+  font-size: 16px;
+  text-align: right;
+  display: block;
+}
+
+.alert  {
+  text-align: center;
+  color: white;
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  margin-top: 30px;
+}
+
+.alert-success{
+  background-color: green;
+}
+
+.alert-danger{
+  background-color: red;
+}
+
+
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-transparent{
+  width: 100vw;
+  margin-bottom:0px;
+  position: fixed;
+
+//編集中
+  background-color: rgba(0,0,0,0.7);
+  //background:rgb(0,0,0);
+  //opacity: 0.5;
+  z-index: 1000;
+  a{
+    color: #fff !important;
+  }
+
+  .navbar-brand {
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom:10px;
+  }
+
+  img {
+    height: 30px;
+  }
+
+
+}
+
+.login-user{
+  padding: 0px 0px;
+  margin-top: 5px;
+}
+
+.btn-block{
+  color: #fff;
+  border: 1px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+
+  &:hover{
+    color: #800000;
+  }
+}
+
+.topic-new-wrapper{
+  padding-top: 150px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/new.jpg");
+  background-size: cover;
+
+  .btn-block{
+    color: #F08080;
+    border: 1px solid #F08080;
+
+  }
+
+}
+
+
+
+.topic-index-wrapper{
+  padding-top: 70px;
+  background-color: #fafafa;
+  .topic-index-single{
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    .topic-author{
+      padding-left: 20px;
+      padding-right: 20px
+    }
+
+    .topic-text{
+      padding-left: 20px;
+      padding-right: 20px
+    }
+
+    img{
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .topic-index-icon{
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.topic-reply{
+  padding-left: 20px;
+  padding-right: 20px
+}
+
+
+.reply-new-wrapper{
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+  background-color: #fafafa;
+
+}
+
+.form-reply {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.btn-reply {
+  color: #F08080;
+  border: 1px solid #F08080;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+
+  &:hover{
+    color: #800000;
+  }
+}
