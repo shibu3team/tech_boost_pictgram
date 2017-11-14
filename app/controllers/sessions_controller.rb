@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :authenticate_user, only:[:destroy, :logout]
+  skip_before_action :authenticate_user, only:[:new, :create]
   before_action :forbid_login_user, only:[:new, :create]
 
 
@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to root_url
+    redirect_to root_path
   end
 
   private
@@ -31,6 +31,7 @@ class SessionsController < ApplicationController
   def log_out
     session.delete(:user_id)
     @current_user = nil
+    reset_session
   end
 
 end

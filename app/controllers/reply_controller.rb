@@ -1,5 +1,4 @@
 class ReplyController < ApplicationController
-  before_action :authenticate_user, only:[:new, :create, :reply_params]
 
   def new
     @reply = Reply.new

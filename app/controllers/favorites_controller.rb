@@ -1,5 +1,4 @@
 class FavoritesController < ApplicationController
-  before_action :authenticate_user, only:[:index, :create]
 
   def index
     @favorite_topics = current_user.favorite_topics

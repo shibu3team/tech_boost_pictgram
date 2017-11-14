@@ -1,5 +1,4 @@
 class TopicsController < ApplicationController
-  before_action :authenticate_user, only:[:new, :create, :index, :topic_params]
 
   def new
     @topic = Topic.new
