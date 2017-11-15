@@ -4,6 +4,14 @@
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center">New Post</h1>
         <%= form_for @topic do |f| %>
+
+        <% @topic.errors.full_messages.each do |message| %>
+          <div class="form-error text-red">
+            <%= message %>
+          </div>
+        <% end %>
+
+
           <div class="form-group">
             <%= f.label :image, value:"画像アップロード", class:"text-white text-slim" %>
             <%= f.file_field :image, class:"text-white text-slim" %>

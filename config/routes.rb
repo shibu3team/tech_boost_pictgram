@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'reply/new'
-  post 'reply/new', to: 'reply#create'
+  get 'replies/new'
+  post 'replies/new', to: 'replies#create'
 
   root 'pages#index'
   get 'pages/help'
@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  resources 'users', only:[:new, :create]
-  resources 'topics', only:[:new, :create, :index]
   post '/favorites', to: 'favorites#create'
   get "/favorites", to: "favorites#index"
+
+  resources 'users', only:[:new, :create]
+  resources 'topics', only:[:new, :create, :index]
 
 end

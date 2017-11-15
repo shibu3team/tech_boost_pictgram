@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center">New Post</h1>
-        <%= form_for @reply, url: reply_new_path do |f| %>
+        <%= form_for @reply, url: replies_new_path do |f| %>
           <div class="form-group">
             <%= f.text_area :content, placeholder:"コメントを入力", class: 'form-control form-reply' %>
           </div>
