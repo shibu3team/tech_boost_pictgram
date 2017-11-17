@@ -1,7 +1,6 @@
 <div class="topic-index-wrapper">
   <div class="container">
     <% @topics.each do | topic | %>
-
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="topic-index-single">
@@ -28,12 +27,12 @@
 
         <div class="topic-reply">
           <h4>コメント</h4>
-          <% @replies.each do |reply| %>
-            <% if reply.topic_id == topic.id %>
+          <% topic.replies.each do |reply| %>
+
               <div class="reply-single">
                 <%= reply.content %>
               </div>
-            <% end %>
+
           <% end %>
         </div>
 
