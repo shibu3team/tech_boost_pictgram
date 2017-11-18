@@ -14,6 +14,18 @@
           <p class="topic-text">
             <%= topic.description %>
           </p>
+
+          <div class="topic-reply">
+            <h4>コメント</h4>
+            <% topic.replies.each do |reply| %>
+
+                <div class="reply-single">
+                  <%= reply.content %>
+                </div>
+
+            <% end %>
+          </div>
+
         </div>
       </div>
     </div>

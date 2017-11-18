@@ -16,6 +16,9 @@ class SessionsController < ApplicationController
       flash.now[:alert] = "ログインに失敗しました"
       render "new"
     end
+
+    binding.pry
+
   end
 
   def destroy
