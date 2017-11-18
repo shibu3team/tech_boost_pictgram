@@ -8,4 +8,9 @@ class Topic < ApplicationRecord
   has_many :favorites
   has_many :favorite_users, through: :favorites, source: "user"
   has_many :replies
+
+  scope :user_topics, -> (user_id) { where(user_id: user_id) }
+  #method的な使い方（引数）＋条件
+
+  
 end

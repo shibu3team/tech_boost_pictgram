@@ -17,9 +17,15 @@ class TopicsController < ApplicationController
   end
 
   def index
-    @topics = Topic.all.includes(:favorite_users).order(created_at: :desc)
+    @topics = Topic.all.includes(:favorite_users, :replies).order(created_at: :desc)
 ##検証用
     @replies = Reply.all
+
+##modelに処理描く例文。scope
+    @user_topics = Topic.user_topics(1)
+  #
+
+  
   end
 
 

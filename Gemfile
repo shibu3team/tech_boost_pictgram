@@ -38,7 +38,8 @@ gem "devise"
 
 #画像投稿機能を実装させる
 gem "carrierwave"
-
+#carrierwaveとセット。投稿に制限をつける。
+gem 'rmagick'
 
 
 
