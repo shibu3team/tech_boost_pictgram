@@ -39,10 +39,10 @@ gem "devise"
 #画像投稿機能を実装させる
 gem "carrierwave"
 #carrierwaveとセット。投稿に制限をつける。
-gem 'rmagick'
+# gem 'rmagick'
 
 
-
+gem 'annotate'
 
 gem 'bootstrap-sass'
 # Use Capistrano for deployment

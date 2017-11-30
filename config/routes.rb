@@ -1,3 +1,22 @@
+# == Route Map
+#
+#      Prefix Verb   URI Pattern            Controller#Action
+# replies_new GET    /replies/new(.:format) replies#new
+#             POST   /replies/new(.:format) replies#create
+#        root GET    /                      pages#index
+#  pages_help GET    /pages/help(.:format)  pages#help
+#       login GET    /login(.:format)       sessions#new
+#             POST   /login(.:format)       sessions#create
+#      logout DELETE /logout(.:format)      sessions#destroy
+#   favorites POST   /favorites(.:format)   favorites#create
+#             GET    /favorites(.:format)   favorites#index
+#       users POST   /users(.:format)       users#create
+#    new_user GET    /users/new(.:format)   users#new
+#      topics GET    /topics(.:format)      topics#index
+#             POST   /topics(.:format)      topics#create
+#   new_topic GET    /topics/new(.:format)  topics#new
+# 
+
 Rails.application.routes.draw do
 
   get 'replies/new'
